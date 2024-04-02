@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:road_rescue_app/garage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromRGBO(103, 58, 183, 1)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Road Rescue App'),
+      home: const GaragePage(title: 'Road Rescue App'),
     );
   }
 }
@@ -107,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Days left for Mini Project:',
+              'Days left for Mini Project Submission:',
             ),
             Text(
               '$_counter',
