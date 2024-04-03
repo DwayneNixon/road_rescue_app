@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         BackgroundImage(
-          image: 'assets/images/login_bg.png',
+          image: 'assets/images/login page image.jpeg',
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
@@ -67,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                       border:
-                      Border(bottom: BorderSide(width: 1, color: kWhite))),
+                          Border(bottom: BorderSide(width: 1, color: kWhite))),
                 ),
               ),
               SizedBox(

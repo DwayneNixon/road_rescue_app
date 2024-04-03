@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GaragePage extends StatelessWidget {
-  const GaragePage({super.key, required this.title});
+  const GaragePage({Key? key, required this.title});
 
   final String title;
 
@@ -73,7 +73,7 @@ class GaragePage extends StatelessWidget {
 }
 
 class GarageDetailsPage extends StatelessWidget {
-  const GarageDetailsPage({super.key, Key? customKey, required this.garage});
+  const GarageDetailsPage({Key? key, required this.garage}) : super(key: key);
 
   final Garage garage;
 

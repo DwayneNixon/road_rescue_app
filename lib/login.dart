@@ -3,10 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'screens/screens.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(LoginPage());
 }
 
-class MyApp extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Road Rescue',
       theme: ThemeData(
         textTheme:
-        GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
+            GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
