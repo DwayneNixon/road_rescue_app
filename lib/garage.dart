@@ -159,7 +159,31 @@ class GarageDetailsPage extends StatelessWidget {
                           ),
                           SizedBox(height: 10),
                           Text(
-                            'Item 1',
+                            'Fuel',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 120,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: NetworkImage('IMAGE_URL'),
+                            radius: 30,
+                          ),
+                          SizedBox(height: 15),
+                          Text(
+                            'Maintenance',
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -183,7 +207,7 @@ class GarageDetailsPage extends StatelessWidget {
                           ),
                           SizedBox(height: 15),
                           Text(
-                            'Item 2',
+                            'Puncture',
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -207,31 +231,7 @@ class GarageDetailsPage extends StatelessWidget {
                           ),
                           SizedBox(height: 15),
                           Text(
-                            'Item 3',
-                            style: TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      margin: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            backgroundImage: NetworkImage('IMAGE_URL'),
-                            radius: 30,
-                          ),
-                          SizedBox(height: 15),
-                          Text(
-                            'Item 4',
+                            'Shutdown',
                             style: TextStyle(
                               fontSize: 16,
                             ),
@@ -263,29 +263,29 @@ class GarageDetailsPage extends StatelessWidget {
                         color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(width: 10),
-                          CircleAvatar(
+                          const SizedBox(width: 10),
+                          const CircleAvatar(
                             backgroundImage: NetworkImage('IMAGE_URL'),
                             radius: 30,
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Name',
-                                style: TextStyle(
+                                (garage.reviewname1),
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                               ),
-                              SizedBox(height: 15),
+                              const SizedBox(height: 15),
                               Text(
-                                'Review',
-                                style: TextStyle(
+                                (garage.review1),
+                                style: const TextStyle(
                                   fontSize: 16,
                                 ),
                               ),
@@ -336,77 +336,77 @@ class GarageDetailsPage extends StatelessWidget {
                   ],
                 ),
               ),
+              const Text(
+                'Site Images',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.left,
+              ),
+              SizedBox(
+                height: 200,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      width: 200,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        height: double.infinity,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage('IMAGE_URL'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 200,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        height: double.infinity,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage('IMAGE_URL'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 200,
+                      margin: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        height: double.infinity,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage('IMAGE_URL'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ), // Add more items here
+                  ],
+                ),
+              ),
             ],
-            const Text(
-              'Site Images',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.left,
-            ),
-            SizedBox(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Container(
-                    width: 200,
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage('IMAGE_URL'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 200,
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage('IMAGE_URL'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 200,
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage('IMAGE_URL'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ), // Add more items here
-                ],
-              ),
-            ),
           ],
         ),
       ),
@@ -418,6 +418,8 @@ class Garage {
   final String name;
   final String location;
   final String contactNumber;
+  final String reviewname1;
+  final String review1;
   List<String> tickets;
   List<String> reviews;
   List<String> photos;
@@ -426,6 +428,8 @@ class Garage {
     required this.name,
     required this.location,
     required this.contactNumber,
+    required this.reviewname1,
+    required this.review1,
     this.tickets = const [],
     this.reviews = const [],
     this.photos = const [],
@@ -440,6 +444,8 @@ List<Garage> garageList = [
     location:
         '3VJQ+PW2, OPP. SHIV MANDIR, R.B. MARG, DR. VIDYAVIHAR ROAD, NAVPADA,, Ambedkar Nagar, Kurla West, Kurla, Mumbai, Maharashtra 400070',
     contactNumber: '08652803951',
+    reviewname1: 'Dwayne Nixon',
+    review1: 'Great service, very professional and \nfriendly staff.',
     tickets: [
       // Add tickets for this garage
     ],
@@ -462,7 +468,9 @@ List<Garage> garageList = [
       ],
       photos: [
         // Add photos for this garage
-      ]),
+      ],
+      reviewname1: '0',
+      review1: '0'),
   Garage(
       name: 'Garage 3',
       location: 'Location 3',
@@ -475,7 +483,9 @@ List<Garage> garageList = [
       ],
       photos: [
         // Add photos for this garage
-      ]),
+      ],
+      reviewname1: '0',
+      review1: '0'),
   Garage(
       name: 'Garage 4',
       location: 'Location 4',
@@ -488,83 +498,7 @@ List<Garage> garageList = [
       ],
       photos: [
         // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 5',
-      location: 'Location 5',
-      contactNumber: 'Phone 5',
-      tickets: [
-        // Add tickets for this garage
       ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 6',
-      location: 'Location 6',
-      contactNumber: 'Phone 6',
-      tickets: [
-        // Add tickets for this garage
-      ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 7',
-      location: 'Location 7',
-      contactNumber: 'Phone 7',
-      tickets: [
-        // Add tickets for this garage
-      ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 8',
-      location: 'Location 8',
-      contactNumber: 'Phone 8',
-      tickets: [
-        // Add tickets for this garage
-      ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 9',
-      location: 'Location 9',
-      contactNumber: 'Phone 9',
-      tickets: [
-        // Add tickets for this garage
-      ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
-  Garage(
-      name: 'Garage 10',
-      location: 'Location 10',
-      contactNumber: 'Phone 10',
-      tickets: [
-        // Add tickets for this garage
-      ],
-      reviews: [
-        // Add reviews for this garage
-      ],
-      photos: [
-        // Add photos for this garage
-      ]),
+      reviewname1: '0',
+      review1: '0'),
 ];
