@@ -6,6 +6,9 @@ import '';
 class RR extends StatelessWidget {
   final color_white = Colors.white60;
 
+  // Update the minimum SDK constraint in pubspec.yaml to 2.17.0 or higher
+  // Run 'pub get' to fetch the updated dependencies
+
   const RR({super.key});
 
   @override
@@ -188,7 +191,7 @@ class RR extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0,8,0,0),
+                padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
                 child: Row(
                   children: [
                     Expanded(

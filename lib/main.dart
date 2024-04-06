@@ -39,9 +39,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromRGBO(103, 58, 183, 1)),
         useMaterial3: true,
       ),
-      home: GaragePage(
-        title: 'Road Rescue',
-      ),
+      home: GaragePage(),
     );
   }
 }

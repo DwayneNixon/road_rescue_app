@@ -1,10 +1,43 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:road_rescue_app/garage.dart';
+import 'package:road_rescue_app/services/auth.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
 
-class CreateNewAccount extends StatelessWidget {
+class CreateNewAccount extends StatefulWidget {
+  @override
+  State<CreateNewAccount> createState() => _CreateNewAccountState();
+}
+
+class _CreateNewAccountState extends State<CreateNewAccount> {
+  final AuthService _auth = AuthService();
+
+  final TextEditingController _emailcontroller = TextEditingController();
+
+  final TextEditingController _passwordcontroller = TextEditingController();
+  final TextEditingController _passwordcheckcontroller =
+      TextEditingController();
+
+  void signup(String email, String password) async {
+    final user = await _auth.registerWithEmailAndPassword(email, password);
+    if (user != null) {
+      print('Sign up successful');
+    } else {
+      print('Sign up failed');
+    }
+  }
+
+  @override
+  void dispose() {
+    _emailcontroller.dispose();
+    _passwordcontroller.dispose();
+    _passwordcheckcontroller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -64,23 +97,27 @@ class CreateNewAccount extends StatelessWidget {
                 Column(
                   children: [
                     TextInputField(
+                      //textcontroller: _emailcontroller,
                       icon: FontAwesomeIcons.user,
                       hint: 'User',
                       inputType: TextInputType.name,
                       inputAction: TextInputAction.next,
                     ),
                     TextInputField(
+                      textcontroller: _emailcontroller,
                       icon: FontAwesomeIcons.envelope,
                       hint: 'Email',
                       inputType: TextInputType.emailAddress,
                       inputAction: TextInputAction.next,
                     ),
                     PasswordInput(
+                      textEditingController: _passwordcontroller,
                       icon: FontAwesomeIcons.lock,
                       hint: 'Password',
                       inputAction: TextInputAction.next,
                     ),
                     PasswordInput(
+                      textEditingController: _passwordcheckcontroller,
                       icon: FontAwesomeIcons.lock,
                       hint: 'Confirm Password',
                       inputAction: TextInputAction.done,
@@ -88,7 +125,18 @@ class CreateNewAccount extends StatelessWidget {
                     SizedBox(
                       height: 25,
                     ),
-                    RoundedButton(buttonName: 'Register'),
+                    GestureDetector(
+                        onTap: () {
+                          String email = _emailcontroller.text;
+                          String password = _passwordcontroller.text;
+                          String checkpass = _passwordcheckcontroller.text;
+                          if (password == checkpass) {
+                            signup(email, password);
+                          } else {
+                            print('Passwords do not match');
+                          }
+                        },
+                        child: RoundedButton(buttonName: 'Register')),
                     SizedBox(
                       height: 30,
                     ),

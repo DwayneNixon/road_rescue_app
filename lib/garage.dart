@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:road_rescue_app/homePage.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/main.dart';
 
 class GaragePage extends StatelessWidget {
-  const GaragePage({Key? key, required this.title});
-
-  final String title;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,9 +108,7 @@ class GaragePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MyHomePage(
-                    title: 'Home Page',
-                  ),
+                  builder: (context) => RR(),
                 ),
               );
               break;
@@ -121,9 +116,7 @@ class GaragePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => GaragePage(
-                    title: 'Garage Page',
-                  ),
+                  builder: (context) => GaragePage(),
                 ),
               );
               break;
@@ -143,16 +136,25 @@ class GaragePage extends StatelessWidget {
   }
 }
 
-class GarageDetailsPage extends StatelessWidget {
+class GarageDetailsPage extends StatefulWidget {
   const GarageDetailsPage({Key? key, required this.garage}) : super(key: key);
 
   final Garage garage;
 
   @override
+  State<GarageDetailsPage> createState() => _GarageDetailsPageState();
+}
+
+class _GarageDetailsPageState extends State<GarageDetailsPage> {
+  String Booked = 'Book';
+  String Booked1 = 'Book';
+  String Booked2 = 'Book';
+  String Booked3 = 'Book';
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(garage.name),
+        title: Text(widget.garage.name),
         backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: SingleChildScrollView(
@@ -160,17 +162,17 @@ class GarageDetailsPage extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20), // Add this line
-              if (garage != null) ...[
+              if (widget.garage != null) ...[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircleAvatar(
-                      backgroundImage: AssetImage('${garage.imageUrl}'),
+                      backgroundImage: AssetImage('${widget.garage.imageUrl}'),
                       radius: 30,
                     ),
                     const SizedBox(width: 10), // Add this line for the gap
                     Text(
-                      '${garage.name}\nContact: ${garage.contactNumber}',
+                      '${widget.garage.name}\nContact: ${widget.garage.contactNumber}',
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -196,7 +198,7 @@ class GarageDetailsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
-                    (garage.location),
+                    (widget.garage.location),
                     style: const TextStyle(
                       fontSize: 16,
                     ),
@@ -247,10 +249,17 @@ class GarageDetailsPage extends StatelessWidget {
                               SizedBox(height: 10),
                               TextButton(
                                 onPressed: () {
-                                  print('Booked');
+                                  // print('Booked');
+                                  setState(() {
+                                    if (Booked == 'Book') {
+                                      Booked = 'Booked';
+                                    } else {
+                                      Booked = 'Book';
+                                    }
+                                  });
                                 },
                                 child: Text(
-                                  'Book',
+                                  Booked,
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.blue,
@@ -292,10 +301,17 @@ class GarageDetailsPage extends StatelessWidget {
                               SizedBox(height: 10),
                               TextButton(
                                 onPressed: () {
-                                  print('Booked');
+                                  // print('Booked');
+                                  setState(() {
+                                    if (Booked1 == 'Book') {
+                                      Booked1 = 'Booked';
+                                    } else {
+                                      Booked1 = 'Book';
+                                    }
+                                  });
                                 },
                                 child: Text(
-                                  'Book',
+                                  Booked1,
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.blue,
@@ -337,10 +353,17 @@ class GarageDetailsPage extends StatelessWidget {
                               SizedBox(height: 10),
                               TextButton(
                                 onPressed: () {
-                                  print('Booked');
+                                  // print('Booked');
+                                  setState(() {
+                                    if (Booked2 == 'Book') {
+                                      Booked2 = 'Booked';
+                                    } else {
+                                      Booked2 = 'Book';
+                                    }
+                                  });
                                 },
                                 child: Text(
-                                  'Book',
+                                  Booked2,
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.blue,
@@ -382,10 +405,17 @@ class GarageDetailsPage extends StatelessWidget {
                               SizedBox(height: 10),
                               TextButton(
                                 onPressed: () {
-                                  print('Booked');
+                                  // print('Booked');
+                                  setState(() {
+                                    if (Booked3 == 'Book') {
+                                      Booked3 = 'Booked';
+                                    } else {
+                                      Booked3 = 'Book';
+                                    }
+                                  });
                                 },
                                 child: Text(
-                                  'Book',
+                                  Booked3,
                                   style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.blue,
@@ -426,7 +456,7 @@ class GarageDetailsPage extends StatelessWidget {
                             const SizedBox(width: 10),
                             CircleAvatar(
                               backgroundImage:
-                                  AssetImage('${garage.reviewimage1}'),
+                                  AssetImage('${widget.garage.reviewimage1}'),
                               radius: 30,
                             ),
                             const SizedBox(width: 10),
@@ -435,14 +465,14 @@ class GarageDetailsPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  (garage.reviewname1),
+                                  (widget.garage.reviewname1),
                                   style: const TextStyle(
                                     fontSize: 16,
                                   ),
                                 ),
                                 const SizedBox(height: 15),
                                 Text(
-                                  (garage.review1),
+                                  (widget.garage.review1),
                                   style: const TextStyle(
                                     fontSize: 16,
                                   ),
@@ -465,7 +495,7 @@ class GarageDetailsPage extends StatelessWidget {
                             const SizedBox(width: 10),
                             CircleAvatar(
                               backgroundImage:
-                                  AssetImage('${garage.reviewimage2}'),
+                                  AssetImage('${widget.garage.reviewimage2}'),
                               radius: 30,
                             ),
                             const SizedBox(width: 10),
@@ -474,14 +504,14 @@ class GarageDetailsPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  (garage.reviewname2),
+                                  (widget.garage.reviewname2),
                                   style: const TextStyle(
                                     fontSize: 16,
                                   ),
                                 ),
                                 const SizedBox(height: 15),
                                 Text(
-                                  (garage.review2),
+                                  (widget.garage.review2),
                                   style: const TextStyle(
                                     fontSize: 16,
                                   ),
@@ -521,7 +551,7 @@ class GarageDetailsPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
-                                  '${garage.image1}'), // Assuming garage.image2 is an asset path
+                                  '${widget.garage.image1}'), // Assuming garage.image2 is an asset path
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -540,7 +570,7 @@ class GarageDetailsPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
-                                  '${garage.image2}'), // Assuming garage.image2 is an asset path
+                                  '${widget.garage.image2}'), // Assuming garage.image2 is an asset path
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -559,7 +589,7 @@ class GarageDetailsPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
-                                  '${garage.image2}'), // Assuming garage.image2 is an asset path
+                                  '${widget.garage.image2}'), // Assuming garage.image2 is an asset path
                               fit: BoxFit.cover,
                             ),
                           ),
