@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:road_rescue_app/emergency-button.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
 
@@ -52,6 +53,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                   RoundedButton(
                     buttonName: 'Login',
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+
+                  EmergencyButton(
+                    buttonName: 'Emergency',
+                    onPressed: () {
+                      // Handle emergency button press
+                      // Add your emergency logic here
+                    },
                   ),
                   SizedBox(
                     height: 25,
