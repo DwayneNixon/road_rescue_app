@@ -89,6 +89,10 @@ class GaragePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Login',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
@@ -96,15 +100,11 @@ class GaragePage extends StatelessWidget {
             icon: Icon(Icons.garage),
             label: 'Garage',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Login',
-          ),
         ],
         onTap: (int index) {
           // Handle navigation based on the index tapped
           switch (index) {
-            case 0:
+            case 1:
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -112,7 +112,7 @@ class GaragePage extends StatelessWidget {
                 ),
               );
               break;
-            case 1:
+            case 2:
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -120,7 +120,7 @@ class GaragePage extends StatelessWidget {
                 ),
               );
               break;
-            case 2:
+            case 0:
               Navigator.push(
                 context,
                 MaterialPageRoute(
