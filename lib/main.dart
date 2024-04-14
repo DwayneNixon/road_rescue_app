@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:road_rescue_app/Service.dart';
 import 'package:road_rescue_app/garage.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:road_rescue_app/login.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromRGBO(103, 58, 183, 1)),
         useMaterial3: true,
       ),
-      home: RR(),
+      home: PicturePage(),
     );
   }
 }
