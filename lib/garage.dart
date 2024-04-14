@@ -539,7 +539,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                     scrollDirection: Axis.horizontal,
                     children: [
                       Container(
-                        width: 200,
+                        width: 300,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.grey[200],
@@ -558,26 +558,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         ),
                       ),
                       Container(
-                        width: 200,
-                        margin: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Container(
-                          width: double.infinity,
-                          height: double.infinity,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                  '${widget.garage.image2}'), // Assuming garage.image2 is an asset path
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 200,
+                        width: 300,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.grey[200],
@@ -641,30 +622,59 @@ class Garage {
 List<Garage> garageList = [
   Garage(
     name: 'Raza Motor Garage',
-    imageUrl: 'assets/images/login page image.jpeg',
+    imageUrl: 'assets/images/Garage 1/thumbnail.jpeg',
     location:
         '3VJQ+PW2, OPP. SHIV MANDIR, R.B. MARG,\nVIDYAVIHAR ROAD, NAVPADA,Ambedkar Nagar,\nKurla West, Kurla, Mumbai, Maharashtra 400070',
     contactNumber: '08652803951',
     reviewname1: 'Dwayne Nixon',
-    reviewimage1: 'assets/images/login page image.jpeg',
+    reviewimage1: 'assets/images/download.jpeg',
     review1: 'Great service, very professional and \nfriendly staff.',
     reviewname2: 'Rajesh Kumar',
-    reviewimage2: 'assets/images/login page image.jpeg',
+    reviewimage2: 'assets/images/download.jpeg',
     review2: 'Excellent service, very professional and \nfriendly staff.',
-    image1: 'assets/images/login page image.jpeg',
-    image2: 'assets/images/login page image.jpeg',
+    image1: 'assets/images/Garage 1/2016-01-21.jpg',
+    image2: 'assets/images/Garage 1/2024-03-18.jpg',
   ),
   Garage(
-      name: 'Garage 2',
-      imageUrl: 'assets/images/login page image.jpeg',
-      location: 'Location 2',
-      contactNumber: 'Phone 2',
-      reviewname1: '0',
-      reviewimage1: 'assets/images/login page image.jpeg',
-      review1: '0',
-      reviewname2: '0',
-      reviewimage2: 'assets/images/login page image.jpeg',
-      review2: '0',
-      image1: 'assets/images/login page image.jpeg',
-      image2: 'assets/images/login page image.jpeg'),
+      name: 'Alfa Motor Garage',
+      imageUrl: 'assets/images/Garage 2/unnamed.jpg',
+      location:
+          'Premier Gate No.6, Milind Nagar, Vidyavihar Rd, \nnear S.T. Workshop, Kurla West, Mumbai, \nMaharashtra 400070',
+      contactNumber: '09594414196',
+      reviewname1: 'Shreya Chakraborty',
+      reviewimage1: 'assets/images/download.jpeg',
+      review1: 'Good Service and \nFriendly Staff',
+      reviewname2: 'Ravi Singh',
+      reviewimage2: 'assets/images/download.jpeg',
+      review2: 'Terrible Service and \nUnfriendly Staff',
+      image1: 'assets/images/Garage 2/unnamed (1).jpg',
+      image2: 'assets/images/Garage 2/thumbnail.jpeg'),
+  Garage(
+      name: 'GoMechanic',
+      imageUrl: 'assets/images/Garage 3/2024-03-21.jpg',
+      location:
+          'Shop No 1, Gurunanak Nagar, Narayan Nagar, \nGhatkopar West, Mumbai, Maharashtra 400072',
+      contactNumber: '08398970970',
+      reviewname1: 'David James',
+      reviewimage1: 'assets/images/download.jpeg',
+      review1: 'Remote Location and \nPoor Service',
+      reviewname2: 'Jayesh Patel',
+      reviewimage2: 'assets/images/download.jpeg',
+      review2: 'Sraff were alright but \nService was poor',
+      image1: 'assets/images/Garage 3/2023-03-16.jpg',
+      image2: 'assets/images/Garage 3/2023-01-07.jpg'),
+  Garage(
+      name: 'Bombay Garage',
+      imageUrl: 'assets/images/Garage 4/thumbnail.jpeg',
+      location:
+          'Lok Tilak Terminus A/C Waiting Hall, \nLokmanya Tilak Terminus Railway Yard, \nKurla, Mumbai, Maharashtra 400089',
+      contactNumber: '98756432102',
+      reviewname1: 'Shaun Menezes',
+      reviewimage1: 'assets/images/download.jpeg',
+      review1: 'Terrible Place, had to wait for hours \nfor service',
+      reviewname2: 'Swayam Singh',
+      reviewimage2: 'assets/images/download.jpeg',
+      review2: 'Never Coming Here again.',
+      image1: 'assets/images/Garage 4/thumbnail2.jpeg',
+      image2: 'assets/images/Garage 4/2022-07-11.jpg'),
 ];
