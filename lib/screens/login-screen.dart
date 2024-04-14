@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:road_rescue_app/emergency-button.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
+import 'package:road_rescue_app/Emergencypage.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
