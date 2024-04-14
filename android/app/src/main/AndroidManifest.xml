@@ -20,8 +20,15 @@
                  while the Flutter UI initializes. After that, this theme continues
                  to determine the Window background behind the Flutter UI. -->
             <meta-data
-                android:name="io.flutter.embedding.android.NormalTheme"
-                android:resource="@style/NormalTheme" />
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+              <meta-data android:name="com.google.android.geo.IzaSyCz0QoEFEwSFXBqvu9C3GduudOAZDY7MvI"
+               android:value="AIzaSyCz0QoEFEwSFXBqvu9C3GduudOAZDY7MvI"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <!-- Add this meta-data tag to specify the Flutter embedding version -->
