@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../emergencies/AmbulanceEmergency.dart';
+import '../emergencies/FireBrigadeEmergency.dart';
 import '../emergencies/policeemergency.dart';
 class Emergency extends StatelessWidget {
   const Emergency({super.key});
@@ -15,6 +17,9 @@ class Emergency extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: [
           PoliceEmergency(),
+          AmbulanceEmergency(),
+          FireBrigadeEmergency(),
+
         ],
       ),
 
