@@ -37,10 +37,12 @@ class _PicturePageState extends State<PicturePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Services'),
+        backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 20),
             Container(
               height: 200,
               child: CarouselSlider(
@@ -71,7 +73,7 @@ class _PicturePageState extends State<PicturePage> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(left: 16), // Add left padding
               child: Align(
@@ -242,7 +244,7 @@ class _PicturePageState extends State<PicturePage> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(left: 16), // Add left padding
               child: Align(
@@ -390,7 +392,7 @@ class _PicturePageState extends State<PicturePage> {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(left: 16), // Add left padding
               child: Align(
