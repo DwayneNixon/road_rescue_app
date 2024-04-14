@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:road_rescue_app/garage.dart';
+import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/services/auth.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
@@ -19,7 +19,7 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
 
   final TextEditingController _passwordcontroller = TextEditingController();
   final TextEditingController _passwordcheckcontroller =
-      TextEditingController();
+  TextEditingController();
 
   void signup(String email, String password) async {
     final user = await _auth.registerWithEmailAndPassword(email, password);
