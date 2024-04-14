@@ -9,23 +9,8 @@ class GaragePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Road Rescue'),
+        title: Text('Garages'),
         backgroundColor: const Color(0xFF9BC1BC),
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            // Handle menu button press
-          },
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {
-              // Handle search button press
-            },
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -86,7 +71,7 @@ class GaragePage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: Color(0xFF9BC1BC).withOpacity(0.5),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -55,6 +55,7 @@ flutter:
     - assets/images/Garage 2/
     - assets/images/Garage 3/
     - assets/images/Garage 4/
+    - assets/images/Services/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

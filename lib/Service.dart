@@ -36,34 +36,35 @@ class _PicturePageState extends State<PicturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Picture Page'),
+        title: Text('Services'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
+              height: 200,
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 200,
+                  height: 250,
                   autoPlay: true,
                   enlargeCenterPage: true,
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: true,
                   autoPlayAnimationDuration: Duration(milliseconds: 2000),
-                  viewportFraction: 0.8,
+                  viewportFraction: 0.9,
                 ),
                 items: [
                   Image.asset(
-                    'assets/images/Garage 3/2023-01-07.jpg',
+                    'assets/images/Services/75088069-car-repair-service-people-in-uniform-repair-the-broken-car.jpg',
                     fit: BoxFit.cover,
                   ),
                   Image.asset(
-                    'assets/images/Garage 3/2023-01-07.jpg',
+                    'assets/images/Services/147212196-car-service-concept-people-repair-car-using-professional-tool.jpg',
                     fit: BoxFit.cover,
                   ),
                   Image.asset(
-                    'assets/images/Garage 3/2023-01-07.jpg',
+                    'assets/images/Services/maruti-garage-chikhli-navsari-car-repair-and-services-mitsubishi-l6q83tz2t8.avif',
                     fit: BoxFit.cover,
                   ),
                   // Add more images here
@@ -91,79 +92,151 @@ class _PicturePageState extends State<PicturePage> {
                 children: [
                   GestureDetector(
                     onTap: () => selectVehicle(0),
-                    child: Container(
-                      width: 120,
-                      height: 100,
-                      margin: EdgeInsets.only(
-                          left: 16,
-                          right: 10), // Add left and right margin for gap
-                      decoration: BoxDecoration(
-                        color: selectedVehicleIndex == 0
-                            ? Colors.green // Highlighted color
-                            : Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
-                      ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100, // Reduce the width
+                          height: 133, // Reduce the height
+                          margin: EdgeInsets.only(
+                              left: 16,
+                              right: 15), // Add left and right margin for gap
+                          decoration: BoxDecoration(
+                            color: selectedVehicleIndex == 0
+                                ? Color.fromARGB(
+                                    255, 156, 215, 218) // Highlighted color
+                                : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/Services/electric-car.png', // Replace with your vehicle image path
+                                fit: BoxFit.contain,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'Gas Vehicle', // Replace with the text for the image
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectVehicle(1),
-                    child: Container(
-                      width: 120,
-                      height: 100,
-                      margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
-                      decoration: BoxDecoration(
-                        color: selectedVehicleIndex == 1
-                            ? Colors.green // Highlighted color
-                            : Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
-                      ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100, // Reduce the width
+                          height: 133, // Reduce the height
+                          margin: EdgeInsets.only(
+                              right: 15), // Add right margin for gap
+                          decoration: BoxDecoration(
+                            color: selectedVehicleIndex == 1
+                                ? Color.fromARGB(
+                                    255, 156, 215, 218) // Highlighted color
+                                : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/Services/motorbike.png', // Replace with your vehicle image path
+                                fit: BoxFit.contain,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'Motorbike', // Replace with the text for the image
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectVehicle(2),
-                    child: Container(
-                      width: 120,
-                      height: 100,
-                      margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
-                      decoration: BoxDecoration(
-                        color: selectedVehicleIndex == 2
-                            ? Colors.green // Highlighted color
-                            : Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
-                      ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100, // Reduce the width
+                          height: 133, // Reduce the height
+                          margin: EdgeInsets.only(
+                              right: 15), // Add right margin for gap
+                          decoration: BoxDecoration(
+                            color: selectedVehicleIndex == 2
+                                ? Color.fromARGB(
+                                    255, 156, 215, 218) // Highlighted color
+                                : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/Services/truck.png', // Replace with your vehicle image path
+                                fit: BoxFit.contain,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'Truck', // Replace with the text for the image
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectVehicle(3),
-                    child: Container(
-                      width: 120,
-                      height: 100,
-                      margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
-                      decoration: BoxDecoration(
-                        color: selectedVehicleIndex == 3
-                            ? Colors.green // Highlighted color
-                            : Colors.grey[300],
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
-                      ),
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 100, // Reduce the width
+                          height: 133, // Reduce the height
+                          margin: EdgeInsets.only(
+                              right: 15), // Add right margin for gap
+                          decoration: BoxDecoration(
+                            color: selectedVehicleIndex == 3
+                                ? Color.fromARGB(
+                                    255, 156, 215, 218) // Highlighted color
+                                : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/images/Services/battery.png', // Replace with your vehicle image path
+                                fit: BoxFit.contain,
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'Electric Car', // Replace with the text for the image
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -191,20 +264,21 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectMode(0),
                     child: Container(
-                      width: 200,
+                      width: 100, // Reduce the width
                       height: 40,
                       margin: EdgeInsets.only(
                           left: 16,
-                          right: 10), // Add left and right margin for gap
+                          right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 0
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
                         child: Text(
-                          'Vehicle 1',
+                          'Electric',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -216,19 +290,20 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectMode(1),
                     child: Container(
-                      width: 200,
+                      width: 100, // Reduce the width
                       height: 40,
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 1
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
                         child: Text(
-                          'Vehicle 2',
+                          'CNG',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -240,19 +315,20 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectMode(2),
                     child: Container(
-                      width: 200,
+                      width: 100, // Reduce the width
                       height: 40,
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 2
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
                         child: Text(
-                          'Vehicle 3',
+                          'Petrol',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -264,19 +340,20 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectMode(3),
                     child: Container(
-                      width: 200,
+                      width: 100, // Reduce the width
                       height: 40,
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 3
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
                         child: Text(
-                          'Vehicle 4',
+                          'Diesel',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -288,19 +365,20 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectMode(4),
                     child: Container(
-                      width: 200,
+                      width: 100, // Reduce the width
                       height: 40,
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 4
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
                         child: Text(
-                          'Vehicle 5',
+                          'Power',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -334,84 +412,140 @@ class _PicturePageState extends State<PicturePage> {
                   GestureDetector(
                     onTap: () => selectCategory(0),
                     child: Container(
-                      width: 120,
-                      height: 100,
+                      width: 100, // Reduce the width
+                      height: 133, // Reduce the height
                       margin: EdgeInsets.only(
                           left: 16,
-                          right: 10), // Add left and right margin for gap
+                          right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 0
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Services/car (1).png', // Replace with your vehicle image path
+                            fit: BoxFit.contain,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Sports', // Replace with your category text
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectCategory(1),
                     child: Container(
-                      width: 120,
-                      height: 100,
+                      width: 100, // Reduce the width
+                      height: 133, // Reduce the height
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 1
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Services/sedan-car-model.png', // Replace with your vehicle image path
+                            fit: BoxFit.contain,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Sedan', // Replace with your category text
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectCategory(2),
                     child: Container(
-                      width: 120,
-                      height: 100,
+                      width: 100, // Reduce the width
+                      height: 133, // Reduce the height
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 2
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Services/car-of-hatchback-model.png', // Replace with your vehicle image path
+                            fit: BoxFit.contain,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'Hatchback', // Replace with your category text
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () => selectCategory(3),
                     child: Container(
-                      width: 120,
-                      height: 100,
+                      width: 100, // Reduce the width
+                      height: 133, // Reduce the height
                       margin: EdgeInsets.only(
-                          right: 10), // Add right margin for gap
+                          right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 3
-                            ? Colors.green // Highlighted color
+                            ? Color.fromARGB(
+                                255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Image.asset(
-                        'assets/images/login page image.jpeg', // Replace with your vehicle image path
-                        fit: BoxFit.contain,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Services/car.png', // Replace with your vehicle image path
+                            fit: BoxFit.contain,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'SUV', // Replace with your category text
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 if (selectedVehicleIndex != null &&
@@ -439,6 +573,7 @@ class _PicturePageState extends State<PicturePage> {
               ),
               child: Text('Next'),
             ),
+            SizedBox(height: 10),
           ],
         ),
       ),
