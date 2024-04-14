@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:road_rescue_app/Service.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/main.dart';
@@ -98,7 +99,7 @@ class GaragePage extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.garage),
-            label: 'Garage',
+            label: 'Service',
           ),
         ],
         onTap: (int index) {
@@ -116,7 +117,7 @@ class GaragePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => GaragePage(),
+                  builder: (context) => PicturePage(),
                 ),
               );
               break;

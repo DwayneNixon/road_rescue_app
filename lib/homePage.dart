@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:road_rescue_app/Service.dart';
 import 'package:road_rescue_app/garage.dart';
 import 'package:road_rescue_app/login.dart';
 
@@ -209,7 +210,7 @@ class RR extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.garage),
-            label: 'Garage',
+            label: 'Service',
           ),
         ],
         onTap: (int index) {
@@ -227,7 +228,7 @@ class RR extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => GaragePage(),
+                  builder: (context) => PicturePage(),
                 ),
               );
               break;
