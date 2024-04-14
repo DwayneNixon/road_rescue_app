@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
       title: 'Road Rescue',
       theme: ThemeData(
         textTheme:
-        GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
+            GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
@@ -26,4 +26,4 @@ class LoginPage extends StatelessWidget {
       },
     );
   }
-}//login dart
+}

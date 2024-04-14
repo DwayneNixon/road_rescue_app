@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/main.dart';
-import 'package:road_rescue_app/maps.dart';
 
 class GaragePage extends StatelessWidget {
   @override
@@ -117,7 +116,7 @@ class GaragePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MapApp(),
+                  builder: (context) => GaragePage(),
                 ),
               );
               break;

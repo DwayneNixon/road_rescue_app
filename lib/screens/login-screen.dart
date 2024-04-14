@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:road_rescue_app/widgets/emergency-button.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
 
@@ -57,16 +56,6 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  EmergencyButton(
-                    buttonName: 'Emergency',
-                    onPressed: () {
-                      // Handle emergency button press
-                      // Add your emergency logic here
-                    },
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
                 ],
               ),
               GestureDetector(
@@ -78,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                       border:
-                      Border(bottom: BorderSide(width: 1, color: kWhite))),
+                          Border(bottom: BorderSide(width: 1, color: kWhite))),
                 ),
               ),
               SizedBox(
@@ -91,4 +80,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-//login screen dart

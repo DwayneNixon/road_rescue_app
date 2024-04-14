@@ -33,10 +33,9 @@ class EmergencyButton extends StatelessWidget {
             Text(
               buttonName,
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize:20
-              ),
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
             ),
           ],
         ),
