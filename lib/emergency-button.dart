@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:road_rescue_app/Emergencypage.dart';
 
 class EmergencyButton extends StatelessWidget {
   const EmergencyButton({
@@ -21,7 +22,13 @@ class EmergencyButton extends StatelessWidget {
         color: Colors.red, // Red background color for emergency button
       ),
       child: TextButton(
-        onPressed: onPressed,
+        onPressed: () {
+          // Navigate to the emergency page
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Emergencypage()),
+          );
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
