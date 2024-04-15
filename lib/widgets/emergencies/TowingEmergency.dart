@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
-class PoliceEmergency extends StatelessWidget {
+class TowingEmergency extends StatelessWidget {
   _callNumber(String number) async{
     await FlutterPhoneDirectCaller.callNumber(number);
   }
@@ -49,7 +49,7 @@ class PoliceEmergency extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Ambulance',
+                          'Towing',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

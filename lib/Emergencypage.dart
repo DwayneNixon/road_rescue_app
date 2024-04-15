@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_rescue_app/widgets/emergencywidgets/emergency.dart';
+import 'package:road_rescue_app/widgets/emergencywidgets/servicesemergency.dart';
 
 class Emergencypage extends StatelessWidget {
   @override
@@ -24,11 +25,21 @@ class Emergencypage extends StatelessWidget {
           SizedBox(height: 20), // Add some space between the image and text
           Center(
             child: Text(
-              'Emergency',
+              'Emergency Hotline',
               style: TextStyle(fontSize: 24),
             ),
           ),
           Emergency(),
+          SizedBox(height: 20), // Add some space between the "Emergency" section and "Emergency Services" section
+          Center(
+            child: Text(
+             'Emergency Roadside Assistance',
+              style: TextStyle(fontSize: 24),
+
+            ),
+          ),
+          ServicesEmergency(),
+          // Add your containers for emergency services here
         ],
       ),
     );
