@@ -36,7 +36,31 @@ class _PicturePageState extends State<PicturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Services'),
+        title: Center(
+          child: Text(
+            'Services',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.menu),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ),
+              );
+            },
+            icon: Icon(Icons.perm_identity_sharp),
+          )
+        ],
         backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: SingleChildScrollView(
@@ -54,7 +78,7 @@ class _PicturePageState extends State<PicturePage> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enableInfiniteScroll: true,
                   autoPlayAnimationDuration: Duration(milliseconds: 2000),
-                  viewportFraction: 0.9,
+                  viewportFraction: 0.95,
                 ),
                 items: [
                   Image.asset(
@@ -108,6 +132,10 @@ class _PicturePageState extends State<PicturePage> {
                                     255, 156, 215, 218) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black, // Add border color
+                              width: 1, // Add border width
+                            ),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -145,6 +173,10 @@ class _PicturePageState extends State<PicturePage> {
                                     255, 156, 215, 218) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black, // Add border color
+                              width: 1, // Add border width
+                            ),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -182,6 +214,10 @@ class _PicturePageState extends State<PicturePage> {
                                     255, 156, 215, 218) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black, // Add border color
+                              width: 1, // Add border width
+                            ),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -219,6 +255,10 @@ class _PicturePageState extends State<PicturePage> {
                                     255, 156, 215, 218) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Colors.black, // Add border color
+                              width: 1, // Add border width
+                            ),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -277,6 +317,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -302,6 +346,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -327,6 +375,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -352,6 +404,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -377,6 +433,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -425,6 +485,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -458,6 +522,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -491,6 +559,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -524,6 +596,10 @@ class _PicturePageState extends State<PicturePage> {
                                 255, 156, 215, 218) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black, // Add border color
+                          width: 1, // Add border width
+                        ),
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -582,8 +658,8 @@ class _PicturePageState extends State<PicturePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Login',
+            icon: Icon(Icons.people),
+            label: 'Blog',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -609,17 +685,11 @@ class _PicturePageState extends State<PicturePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => GaragePage(),
+                  builder: (context) => PicturePage(),
                 ),
               );
               break;
             case 0:
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ),
-              );
               break;
           }
         },

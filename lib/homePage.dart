@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:road_rescue_app/Service.dart';
-import 'package:road_rescue_app/garage.dart';
 import 'package:road_rescue_app/login.dart';
+import 'package:road_rescue_app/map.dart';
+import 'package:road_rescue_app/Emergencypage.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class RR extends StatelessWidget {
   final color_white = Colors.white60;
@@ -13,7 +15,7 @@ class RR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -29,10 +31,18 @@ class RR extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ),
+              );
+            },
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
+        backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -40,16 +50,34 @@ class RR extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    // Navigate to the desired page
-                  },
-                  child: Container(
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: color_white,
+                Container(
+                  height: 200,
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      height: 250,
+                      autoPlay: true,
+                      enlargeCenterPage: true,
+                      aspectRatio: 16 / 9,
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      enableInfiniteScroll: true,
+                      autoPlayAnimationDuration: Duration(milliseconds: 2000),
+                      viewportFraction: 1,
                     ),
+                    items: [
+                      Image.asset(
+                        'assets/images/HomePage_icons/images (1).jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/HomePage_icons/How-to-keep-your-car-safe-this-Diwali.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/HomePage_icons/blog_11.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                      // Add more images here
+                    ],
                   ),
                 ),
                 Padding(
@@ -60,14 +88,34 @@ class RR extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: GestureDetector(
-                            onTap: () {
-                              // Navigate to the desired page
-                            },
+                            onTap: () {},
                             child: Container(
                               height: 40,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: color_white,
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/HomePage_icons/notification.png',
+                                    height: 24,
+                                    width: 24,
+                                  ),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Notifications',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -78,13 +126,39 @@ class RR extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: GestureDetector(
                             onTap: () {
-                              // Navigate to the desired page
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Emergencypage()),
+                              );
                             },
                             child: Container(
                               height: 40,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.red,
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/HomePage_icons/Emge.png',
+                                    height: 24,
+                                    width: 24,
+                                  ),
+                                  SizedBox(width: 8),
+                                  Text(
+                                    'Emergency',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -112,13 +186,40 @@ class RR extends StatelessWidget {
                           padding: const EdgeInsets.only(right: 6.0),
                           child: GestureDetector(
                             onTap: () {
-                              // Navigate to the desired page
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PicturePage(),
+                                ),
+                              );
                             },
                             child: Container(
                               height: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/HomePage_icons/Repair.png',
+                                    height: 48,
+                                    width: 48,
+                                  ),
+                                  SizedBox(height: 8),
+                                  Text(
+                                    'Repair',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: color_white,
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
                               ),
                             ),
                           ),
@@ -133,9 +234,31 @@ class RR extends StatelessWidget {
                             },
                             child: Container(
                               height: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/HomePage_icons/Towing.png',
+                                    height: 48,
+                                    width: 48,
+                                  ),
+                                  SizedBox(height: 8),
+                                  Text(
+                                    'Towing',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: color_white,
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
                               ),
                             ),
                           ),
@@ -150,9 +273,31 @@ class RR extends StatelessWidget {
                             },
                             child: Container(
                               height: 120,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/HomePage_icons/chat.png',
+                                    height: 48,
+                                    width: 48,
+                                  ),
+                                  SizedBox(height: 8),
+                                  Text(
+                                    'Blog',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: color_white,
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 1,
+                                ),
                               ),
                             ),
                           ),
@@ -178,7 +323,11 @@ class RR extends StatelessWidget {
                       Expanded(
                         child: GestureDetector(
                           onTap: () {
-                            // Navigate to the desired page
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MapPage()),
+                            );
                           },
                           child: Container(
                             height: 300,
@@ -186,6 +335,14 @@ class RR extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               color: color_white,
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 1,
+                              ),
+                            ),
+                            child: Image.asset(
+                              'assets/images/College.png',
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
@@ -201,8 +358,8 @@ class RR extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Login',
+            icon: Icon(Icons.people),
+            label: 'Blog',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -233,12 +390,6 @@ class RR extends StatelessWidget {
               );
               break;
             case 0:
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ),
-              );
               break;
           }
         },

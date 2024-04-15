@@ -9,7 +9,31 @@ class GaragePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Garages'),
+        title: Center(
+          child: Text(
+            'Garages',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.menu),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ),
+              );
+            },
+            icon: Icon(Icons.perm_identity_sharp),
+          )
+        ],
         backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: SingleChildScrollView(
@@ -75,8 +99,8 @@ class GaragePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Login',
+            icon: Icon(Icons.people),
+            label: 'Blog',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -107,12 +131,6 @@ class GaragePage extends StatelessWidget {
               );
               break;
             case 0:
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ),
-              );
               break;
           }
         },
