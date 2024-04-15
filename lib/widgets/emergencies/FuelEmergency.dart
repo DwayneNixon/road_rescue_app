@@ -17,7 +17,7 @@ class FuelEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
-          onTap: () => _callNumber('15'),
+          onTap: () => _callNumber('345'),
           child: Container(
             height:180,
             width: MediaQuery.of(context).size.width *0.7,
@@ -27,9 +27,9 @@ class FuelEmergency extends StatelessWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors:[
-                  Color(0xfff85046),
-                  Color(0xfffb8580),
-                  Color(0xfffbd079),
+                  Color(0xfffb388eb),
+                  Color(0xfff8093f1),
+                  Color(0xfff72ddf7),
                 ],
               ),
             ),
@@ -41,7 +41,7 @@ class FuelEmergency extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     backgroundColor:Colors.white.withOpacity(0.5),
-                    child: Image.asset('assets/images/ambulance_icon.png'),
+                    child: Image.asset('assets/images/fuel.png'),
                   ),
                   Expanded(
                     child: Column(
@@ -49,17 +49,17 @@ class FuelEmergency extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Ambulance',
+                          'Fuel Delivery',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: MediaQuery.of(context).size.width*0.06,
                           ),
                         ),
                         Text(
-                          'call 0-1-5 for emergencies',
+                          'call 3-4-5 for delivery',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: MediaQuery.of(context).size.width * 0.045,
                           ),
                         ),
@@ -72,7 +72,7 @@ class FuelEmergency extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              '0-1-5',
+                              '3-4-5',
                               style: TextStyle(
                                 color: Colors.red[300],
                                 fontWeight: FontWeight.bold,

@@ -17,7 +17,7 @@ class TowingEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
-          onTap: () => _callNumber('15'),
+          onTap: () => _callNumber('123'),
           child: Container(
             height:180,
             width: MediaQuery.of(context).size.width *0.7,
@@ -27,9 +27,9 @@ class TowingEmergency extends StatelessWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors:[
-                  Color(0xfff85046),
-                  Color(0xfffb8580),
-                  Color(0xfffbd079),
+                  Color(0xfff815839),
+                  Color(0xfff935e38),
+                  Color(0xfff815839),
                 ],
               ),
             ),
@@ -41,7 +41,7 @@ class TowingEmergency extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     backgroundColor:Colors.white.withOpacity(0.5),
-                    child: Image.asset('assets/images/ambulance_icon.png'),
+                    child: Image.asset('assets/images/towing.png'),
                   ),
                   Expanded(
                     child: Column(
@@ -57,7 +57,7 @@ class TowingEmergency extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'call 0-1-5 for emergencies',
+                          'call 1-2-3 for emergency support',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: MediaQuery.of(context).size.width * 0.045,
@@ -72,7 +72,7 @@ class TowingEmergency extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              '0-1-5',
+                              '1-2-3',
                               style: TextStyle(
                                 color: Colors.red[300],
                                 fontWeight: FontWeight.bold,
