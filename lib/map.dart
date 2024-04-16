@@ -36,8 +36,8 @@ class MapPage extends StatelessWidget {
       ),
       body: FlutterMap(
         options: MapOptions(
-          initialCenter: LatLng(19.08192, 72.8867),
-          initialZoom: 15,
+          initialCenter: LatLng(19.0814, 72.8891),
+          initialZoom: 17,
         ),
         children: [
           TileLayer(

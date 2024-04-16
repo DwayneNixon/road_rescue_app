@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../pallete.dart';
+import 'package:road_rescue_app/homePage.dart';
 
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
@@ -20,7 +21,14 @@ class RoundedButton extends StatelessWidget {
         color: kBlue,
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => RR(),
+            ),
+          );
+        },
         child: Text(
           buttonName,
           style: kBodyText.copyWith(fontWeight: FontWeight.bold),

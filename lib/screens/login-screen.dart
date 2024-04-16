@@ -58,7 +58,6 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-
                   EmergencyButton(
                     buttonName: 'Emergency',
                     onPressed: () {

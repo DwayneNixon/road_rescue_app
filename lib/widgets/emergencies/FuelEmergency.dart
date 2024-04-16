@@ -3,30 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 class FuelEmergency extends StatelessWidget {
-  _callNumber(String number) async{
+  _callNumber(String number) async {
     await FlutterPhoneDirectCaller.callNumber(number);
   }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left:10.0, bottom: 5),
+      padding: const EdgeInsets.only(left: 10.0, bottom: 5),
       child: Card(
-        elevation:5,
+        elevation: 5,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
           onTap: () => _callNumber('345'),
           child: Container(
-            height:180,
-            width: MediaQuery.of(context).size.width *0.7,
+            height: 205,
+            width: MediaQuery.of(context).size.width * 0.7,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors:[
+                colors: [
                   Color(0xfffb388eb),
                   Color(0xfff8093f1),
                   Color(0xfff72ddf7),
@@ -40,12 +40,12 @@ class FuelEmergency extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 25,
-                    backgroundColor:Colors.white.withOpacity(0.5),
+                    backgroundColor: Colors.white.withOpacity(0.5),
                     child: Image.asset('assets/images/fuel.png'),
                   ),
                   Expanded(
                     child: Column(
-                      mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -53,7 +53,7 @@ class FuelEmergency extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: MediaQuery.of(context).size.width*0.06,
+                            fontSize: MediaQuery.of(context).size.width * 0.06,
                           ),
                         ),
                         Text(
@@ -65,7 +65,7 @@ class FuelEmergency extends StatelessWidget {
                         ),
                         Container(
                           height: 30,
-                          width:80,
+                          width: 80,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20),
@@ -76,7 +76,8 @@ class FuelEmergency extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.red[300],
                                 fontWeight: FontWeight.bold,
-                                fontSize: MediaQuery.of(context).size.width*0.045,
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.045,
                               ),
                             ),
                           ),
