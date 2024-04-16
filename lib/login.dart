@@ -23,6 +23,7 @@ class LoginPage extends StatelessWidget {
         '/': (context) => LoginScreen(),
         'ForgotPassword': (context) => ForgotPassword(),
         'CreateNewAccount': (context) => CreateNewAccount(),
+
       },
     );
   }

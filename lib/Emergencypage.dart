@@ -22,20 +22,27 @@ class Emergencypage extends StatelessWidget {
               fit: BoxFit.cover, // Adjust the image fit as needed
             ),
           ),
-          SizedBox(height: 20), // Add some space between the image and text
+          SizedBox(height: 30), // Add some space between the image and text
           Center(
             child: Text(
               'Emergency Hotline',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.red, // Set font color to red
+                fontWeight: FontWeight.bold, // Make the text bold
+              ),
             ),
           ),
           Emergency(),
-          SizedBox(height: 20), // Add some space between the "Emergency" section and "Emergency Services" section
+          SizedBox(height: 30), // Add some space between the "Emergency" section and "Emergency Services" section
           Center(
             child: Text(
-             'Emergency Roadside Assistance',
-              style: TextStyle(fontSize: 24),
-
+              'Emergency Roadside Assistance',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.red, // Set font color to red
+                fontWeight: FontWeight.bold, // Make the text bold
+              ),
             ),
           ),
           ServicesEmergency(),

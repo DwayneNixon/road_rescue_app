@@ -17,7 +17,7 @@ class OnSiteMechanicEmergency extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: InkWell(
-          onTap: () => _callNumber('15'),
+          onTap: () => _callNumber('679'),
           child: Container(
             height:180,
             width: MediaQuery.of(context).size.width *0.7,
@@ -27,9 +27,9 @@ class OnSiteMechanicEmergency extends StatelessWidget {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors:[
-                  Color(0xfff85046),
-                  Color(0xfffb8580),
-                  Color(0xfffbd079),
+                  Color(0xfffa3b18a),
+                  Color(0xfff588157),
+                  Color(0xfff3a5a40),
                 ],
               ),
             ),
@@ -41,7 +41,7 @@ class OnSiteMechanicEmergency extends StatelessWidget {
                   CircleAvatar(
                     radius: 25,
                     backgroundColor:Colors.white.withOpacity(0.5),
-                    child: Image.asset('assets/images/ambulance_icon.png'),
+                    child: Image.asset('assets/images/mechanic.png'),
                   ),
                   Expanded(
                     child: Column(
@@ -49,7 +49,7 @@ class OnSiteMechanicEmergency extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Ambulance',
+                          'Mechanic Help',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -57,7 +57,7 @@ class OnSiteMechanicEmergency extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          'call 0-1-5 for emergencies',
+                          'call 6-7-9 for assistance',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: MediaQuery.of(context).size.width * 0.045,
@@ -72,7 +72,7 @@ class OnSiteMechanicEmergency extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              '0-1-5',
+                              '6-7-9',
                               style: TextStyle(
                                 color: Colors.red[300],
                                 fontWeight: FontWeight.bold,
