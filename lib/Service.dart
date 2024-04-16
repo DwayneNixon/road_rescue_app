@@ -658,10 +658,6 @@ class _PicturePageState extends State<PicturePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
-            label: 'Blog',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
@@ -669,7 +665,12 @@ class _PicturePageState extends State<PicturePage> {
             icon: Icon(Icons.garage),
             label: 'Service',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: 'Blog',
+          ),
         ],
+        currentIndex: 1, // Set the default index to 1
         onTap: (int index) {
           // Handle navigation based on the index tapped
           switch (index) {
@@ -677,23 +678,24 @@ class _PicturePageState extends State<PicturePage> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RR(),
-                ),
-              );
-              break;
-            case 2:
-              Navigator.push(
-                context,
-                MaterialPageRoute(
                   builder: (context) => PicturePage(),
                 ),
               );
               break;
+            case 2:
+              break;
             case 0:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => RR(),
+                ),
+              );
               break;
           }
         },
         backgroundColor: const Color(0xFF9BC1BC),
+        selectedItemColor: Colors.white,
       ),
     );
   }

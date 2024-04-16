@@ -76,6 +76,14 @@ class RR extends StatelessWidget {
                         'assets/images/HomePage_icons/blog_11.jpg',
                         fit: BoxFit.cover,
                       ),
+                      Image.asset(
+                        'assets/images/HomePage_icons/3cd03974-13be-4ddd-81e8-d87a8e842b3b.jpeg',
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        'assets/images/HomePage_icons/6701eec5-6388-4bdc-89c7-10b12fb64a8c.jpeg',
+                        fit: BoxFit.cover,
+                      ),
                       // Add more images here
                     ],
                   ),
@@ -358,10 +366,6 @@ class RR extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
-            label: 'Blog',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
@@ -369,7 +373,12 @@ class RR extends StatelessWidget {
             icon: Icon(Icons.garage),
             label: 'Service',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: 'Blog',
+          ),
         ],
+        currentIndex: 0, // Set the default index to 1
         onTap: (int index) {
           // Handle navigation based on the index tapped
           switch (index) {
@@ -377,23 +386,24 @@ class RR extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RR(),
-                ),
-              );
-              break;
-            case 2:
-              Navigator.push(
-                context,
-                MaterialPageRoute(
                   builder: (context) => PicturePage(),
                 ),
               );
               break;
+            case 2:
+              break;
             case 0:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => RR(),
+                ),
+              );
               break;
           }
         },
         backgroundColor: const Color(0xFF9BC1BC),
+        selectedItemColor: Colors.white,
       ),
     );
   }
