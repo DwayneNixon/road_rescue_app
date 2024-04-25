@@ -373,7 +373,6 @@ class RR extends StatelessWidget {
                             height: 300,
                             width: 400,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
                               color: color_white,
                               border: Border.all(
                                 color: Colors.black,
@@ -381,7 +380,7 @@ class RR extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              'assets/images/College.png',
+                              'assets/images/HomePage_icons/Screenshot from 2024-04-25 16-51-50.png',
                               fit: BoxFit.cover,
                             ),
                           ),

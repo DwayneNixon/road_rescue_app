@@ -37,6 +37,8 @@ dependencies:
   flutter_map: ^6.1.0
   latlng: ^2.0.7
   url_launcher: ^6.2.6
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
 
 dev_dependencies:
   flutter_test:
