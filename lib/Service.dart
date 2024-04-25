@@ -3,6 +3,7 @@ import 'package:road_rescue_app/garage.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class PicturePage extends StatefulWidget {
   @override
@@ -45,17 +46,47 @@ class _PicturePageState extends State<PicturePage> {
           ),
         ),
         leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RR(),
+              ),
+            );
+          },
+          icon: Icon(Icons.home),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ),
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('Logout'),
+                    content: Text('Are you sure you want to logout?'),
+                    actions: [
+                      TextButton(
+                        child: Text('Cancel'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      TextButton(
+                        child: Text('Logout'),
+                        onPressed: () {
+                          FirebaseAuth.instance.signOut();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  );
+                },
               );
             },
             icon: Icon(Icons.perm_identity_sharp),

@@ -28,8 +28,15 @@ class RR extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.menu),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RR(),
+              ),
+            );
+          },
+          icon: Icon(Icons.home),
         ),
         actions: [
           IconButton(
