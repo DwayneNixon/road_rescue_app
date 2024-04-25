@@ -349,7 +349,7 @@ class RR extends StatelessWidget {
                 Container(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    'Services Stops Near You',
+                    'Live Map Location',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w700,
@@ -380,7 +380,7 @@ class RR extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              'assets/images/HomePage_icons/Screenshot from 2024-04-25 16-51-50.png',
+                              'assets/images/HomePage_icons/360_F_554093090_372SlpLXbrLROL0VhPBVVOdeeAqU1gWO.jpg',
                               fit: BoxFit.cover,
                             ),
                           ),
