@@ -191,7 +191,24 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
         ),
       );
     } else {
-      print('Sign up failed');
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('User Already Exists'),
+            content: Text(
+                'The user account already exists. Please try again with a different email.'),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
     }
   }
 }
