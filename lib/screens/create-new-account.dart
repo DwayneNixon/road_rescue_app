@@ -195,9 +195,9 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('User Already Exists'),
+            title: Text('User Already Exists/Weak Password'),
             content: Text(
-                'The user account already exists. Please try again with a different email.'),
+                'The user account already exists or your password is too weak. Please try again with a different email or a stronger password.'),
             actions: [
               TextButton(
                 onPressed: () {
