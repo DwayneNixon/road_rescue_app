@@ -627,7 +627,7 @@ class Garage {
 
 List<Garage> garageList = [
   Garage(
-    name: 'Raza Motor Garage',
+    name: 'RazaMotor Garage',
     imageUrl: 'assets/images/Garage 1/thumbnail.jpeg',
     location:
         '3VJQ+PW2, OPP. SHIV MANDIR, R.B. MARG,\nVIDYAVIHAR ROAD, NAVPADA,Ambedkar Nagar,\nKurla West, Kurla, Mumbai, Maharashtra 400070',

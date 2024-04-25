@@ -1,8 +1,10 @@
 import 'dart:ui';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:road_rescue_app/garage.dart';
+import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/services/auth.dart';
 import '../pallete.dart';
 import '../widgets/widgets.dart';
@@ -15,23 +17,16 @@ class CreateNewAccount extends StatefulWidget {
 class _CreateNewAccountState extends State<CreateNewAccount> {
   final AuthService _auth = AuthService();
 
+  final TextEditingController _usernamecontroller = TextEditingController();
   final TextEditingController _emailcontroller = TextEditingController();
 
   final TextEditingController _passwordcontroller = TextEditingController();
   final TextEditingController _passwordcheckcontroller =
       TextEditingController();
 
-  void signup(String email, String password) async {
-    final user = await _auth.registerWithEmailAndPassword(email, password);
-    if (user != null) {
-      print('Sign up successful');
-    } else {
-      print('Sign up failed');
-    }
-  }
-
   @override
   void dispose() {
+    _usernamecontroller.dispose();
     _emailcontroller.dispose();
     _passwordcontroller.dispose();
     _passwordcheckcontroller.dispose();
@@ -97,9 +92,9 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                 Column(
                   children: [
                     TextInputField(
-                      //textcontroller: _emailcontroller,
+                      textcontroller: _usernamecontroller,
                       icon: FontAwesomeIcons.user,
-                      hint: 'User',
+                      hint: 'Username',
                       inputType: TextInputType.name,
                       inputAction: TextInputAction.next,
                     ),
@@ -125,18 +120,27 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                     SizedBox(
                       height: 25,
                     ),
-                    GestureDetector(
-                        onTap: () {
-                          String email = _emailcontroller.text;
-                          String password = _passwordcontroller.text;
-                          String checkpass = _passwordcheckcontroller.text;
-                          if (password == checkpass) {
-                            signup(email, password);
-                          } else {
-                            print('Passwords do not match');
-                          }
-                        },
-                        child: RoundedButton(buttonName: 'Register')),
+                    ElevatedButton(
+                      onPressed: _signUp,
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: kWhite,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          vertical: size.height * 0.02,
+                          horizontal: size.width * 0.3,
+                        ),
+                        backgroundColor: kBlue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       height: 30,
                     ),
@@ -170,5 +174,24 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
         )
       ],
     );
+  }
+
+  void _signUp() async {
+    String username = _usernamecontroller.text;
+    String email = _emailcontroller.text;
+    String password = _passwordcontroller.text;
+
+    User? user = await _auth.registerWithEmailAndPassword(email, password);
+
+    if (user != null) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginPage(),
+        ),
+      );
+    } else {
+      print('Sign up failed');
+    }
   }
 }

@@ -29,4 +29,8 @@ class AuthService {
       return null;
     }
   }
+
+  Future sendPasswordResetEmail(String email) {
+    return _auth.sendPasswordResetEmail(email: email);
+  }
 }

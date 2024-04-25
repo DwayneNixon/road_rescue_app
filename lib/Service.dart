@@ -122,7 +122,7 @@ class _PicturePageState extends State<PicturePage> {
                       children: [
                         Container(
                           width: 100, // Reduce the width
-                          height: 133, // Reduce the height
+                          height: 135, // Reduce the height
                           margin: EdgeInsets.only(
                               left: 16,
                               right: 15), // Add left and right margin for gap
@@ -164,7 +164,7 @@ class _PicturePageState extends State<PicturePage> {
                       children: [
                         Container(
                           width: 100, // Reduce the width
-                          height: 133, // Reduce the height
+                          height: 135, // Reduce the height
                           margin: EdgeInsets.only(
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
@@ -205,7 +205,7 @@ class _PicturePageState extends State<PicturePage> {
                       children: [
                         Container(
                           width: 100, // Reduce the width
-                          height: 133, // Reduce the height
+                          height: 135, // Reduce the height
                           margin: EdgeInsets.only(
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
@@ -246,7 +246,7 @@ class _PicturePageState extends State<PicturePage> {
                       children: [
                         Container(
                           width: 100, // Reduce the width
-                          height: 133, // Reduce the height
+                          height: 135, // Reduce the height
                           margin: EdgeInsets.only(
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
@@ -475,7 +475,7 @@ class _PicturePageState extends State<PicturePage> {
                     onTap: () => selectCategory(0),
                     child: Container(
                       width: 100, // Reduce the width
-                      height: 133, // Reduce the height
+                      height: 135, // Reduce the height
                       margin: EdgeInsets.only(
                           left: 16,
                           right: 15), // Add left and right margin for gap
@@ -513,7 +513,7 @@ class _PicturePageState extends State<PicturePage> {
                     onTap: () => selectCategory(1),
                     child: Container(
                       width: 100, // Reduce the width
-                      height: 133, // Reduce the height
+                      height: 135, // Reduce the height
                       margin: EdgeInsets.only(
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
@@ -550,7 +550,7 @@ class _PicturePageState extends State<PicturePage> {
                     onTap: () => selectCategory(2),
                     child: Container(
                       width: 100, // Reduce the width
-                      height: 133, // Reduce the height
+                      height: 135, // Reduce the height
                       margin: EdgeInsets.only(
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
@@ -587,7 +587,7 @@ class _PicturePageState extends State<PicturePage> {
                     onTap: () => selectCategory(3),
                     child: Container(
                       width: 100, // Reduce the width
-                      height: 133, // Reduce the height
+                      height: 135, // Reduce the height
                       margin: EdgeInsets.only(
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
