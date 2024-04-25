@@ -159,8 +159,7 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add left and right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 0
-                                ? Color.fromARGB(
-                                    255, 156, 215, 218) // Highlighted color
+                                ? Color(0xFF9BC1BC) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
@@ -200,8 +199,7 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 1
-                                ? Color.fromARGB(
-                                    255, 156, 215, 218) // Highlighted color
+                                ? Color(0xFF9BC1BC) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
@@ -241,8 +239,7 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 2
-                                ? Color.fromARGB(
-                                    255, 156, 215, 218) // Highlighted color
+                                ? Color(0xFF9BC1BC) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
@@ -282,8 +279,7 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 3
-                                ? Color.fromARGB(
-                                    255, 156, 215, 218) // Highlighted color
+                                ? Color(0xFF9BC1BC) // Highlighted color
                                 : Colors.grey[300],
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
@@ -344,8 +340,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 0
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -373,8 +368,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 1
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -402,8 +396,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 2
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -431,8 +424,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 3
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -460,8 +452,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 4
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -512,8 +503,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 0
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -549,8 +539,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 1
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -586,8 +575,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 2
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
@@ -623,8 +611,7 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 3
-                            ? Color.fromARGB(
-                                255, 156, 215, 218) // Highlighted color
+                            ? Color(0xFF9BC1BC) // Highlighted color
                             : Colors.grey[300],
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
