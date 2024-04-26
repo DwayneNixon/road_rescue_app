@@ -8,6 +8,7 @@ import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/map.dart';
 import 'package:road_rescue_app/Emergencypage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:road_rescue_app/widgets/Towingpage.dart';
 
 class RR extends StatelessWidget {
   final color_white = Colors.white60;
@@ -270,6 +271,13 @@ class RR extends StatelessWidget {
                           padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
                           child: GestureDetector(
                             onTap: () {
+                            Navigator.push(
+                            context,
+                              MaterialPageRoute(
+                               builder: (context) => TowingServicesPage(),
+                               ),
+                              );
+
                               // Navigate to the desired page
                             },
                             child: Container(
