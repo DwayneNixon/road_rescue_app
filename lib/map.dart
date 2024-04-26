@@ -63,7 +63,7 @@ class MapPage extends StatelessWidget {
                                   constraints: BoxConstraints(
                                     maxHeight:
                                         MediaQuery.of(context).size.height *
-                                            0.15, // Adjust the height as needed
+                                            0.25, // Adjust the height as needed
                                   ),
                                   child: Column(
                                     crossAxisAlignment:
