@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 import 'Providerspage.dart';
@@ -19,11 +18,14 @@ class TowingServicesPage extends StatelessWidget {
         children: [
           // Background Image
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/TOWING.jpg',
-              fit: BoxFit.fill, // Ensure the image covers the entire space
-              color: Colors.black.withOpacity(0.5), // Darken the background image
-              colorBlendMode: BlendMode.darken,
+            child: Container(
+              color: Color(0xFF4a4e69), // Set background color to #4a4e69
+              child: Image.asset(
+                'assets/images/TOWING.jpg',
+                fit: BoxFit.fill,
+                color: Colors.black.withOpacity(0.5),
+                colorBlendMode: BlendMode.darken,
+              ),
             ),
           ),
           SingleChildScrollView(
@@ -31,7 +33,7 @@ class TowingServicesPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 40.0), // Add space at the top
+                SizedBox(height: 20.0), // Add space at the top
                 Text(
                   'Request Towing Assistance',
                   style: TextStyle(
@@ -41,8 +43,8 @@ class TowingServicesPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 40.0),
-                // Select Location Container
+                SizedBox(height: 20.0),
+                // Select Your Location Container
                 Container(
                   padding: EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
@@ -86,40 +88,7 @@ class TowingServicesPage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Light Vehicle'),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.0),
-                          Expanded(
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Medium Vehicle'),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.0),
-                          Expanded(
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Heavy Vehicle'),
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 20.0),
+                      SizedBox(height: 10.0),
                       // Vehicle Type Dropdown
                       DropdownButtonFormField<String>(
                         decoration: InputDecoration(
@@ -171,12 +140,18 @@ class TowingServicesPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ProvidersPage()),
-                      );// Handle form submission
+                        context,
+                        MaterialPageRoute(builder: (context) => ProvidersPage()),
+                      ); // Handle form submission
                     },
-
-                    child: Text('Submit', style: TextStyle(color: Colors.purple)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Set button color to green
+                      padding: EdgeInsets.symmetric(vertical: 15.0), // Set button height
+                    ),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(color: Colors.black), // Set text color to black
+                    ),
                   ),
                 ),
                 SizedBox(height: 20.0), // Add space below the Submit button
@@ -202,7 +177,7 @@ class TowingServicesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 25.0),
+                SizedBox(height: 60.0),
               ],
             ),
           ),
@@ -211,4 +186,3 @@ class TowingServicesPage extends StatelessWidget {
     );
   }
 }
-
