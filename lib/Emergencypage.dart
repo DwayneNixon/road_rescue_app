@@ -1,13 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:road_rescue_app/widgets/emergencywidgets/emergency.dart';
 import 'package:road_rescue_app/widgets/emergencywidgets/servicesemergency.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:road_rescue_app/login.dart';
 
 class Emergencypage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Emergency Page'),
+        title: Center(
+          child: Text(
+            'Emergency Services',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('Logout'),
+                    content: Text('Are you sure you want to logout?'),
+                    actions: [
+                      TextButton(
+                        child: Text('Cancel'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      TextButton(
+                        child: Text('Logout'),
+                        onPressed: () {
+                          FirebaseAuth.instance.signOut();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            icon: Icon(Icons.perm_identity_sharp),
+          )
+        ],
+        backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: Column(
         children: [
@@ -34,7 +80,9 @@ class Emergencypage extends StatelessWidget {
             ),
           ),
           Emergency(),
-          SizedBox(height: 30), // Add some space between the "Emergency" section and "Emergency Services" section
+          SizedBox(
+              height:
+                  30), // Add some space between the "Emergency" section and "Emergency Services" section
           Center(
             child: Text(
               'Emergency Roadside Assistance',
