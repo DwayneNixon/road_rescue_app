@@ -4,10 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:road_rescue_app/Service.dart';
+import 'package:road_rescue_app/chat.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/map.dart';
 import 'package:road_rescue_app/Emergencypage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:road_rescue_app/updates.dart';
 import 'package:road_rescue_app/widgets/Towingpage.dart';
 
 class RR extends StatelessWidget {
@@ -129,7 +131,14 @@ class RR extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UpdatesPage(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 40,
                               decoration: BoxDecoration(
@@ -150,7 +159,7 @@ class RR extends StatelessWidget {
                                   ),
                                   SizedBox(width: 8),
                                   Text(
-                                    'Notifications',
+                                    'Updates',
                                     style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold,
@@ -271,11 +280,11 @@ class RR extends StatelessWidget {
                           padding: const EdgeInsets.fromLTRB(6, 0, 6, 0),
                           child: GestureDetector(
                             onTap: () {
-                            Navigator.push(
-                            context,
-                              MaterialPageRoute(
-                               builder: (context) => TowingServicesPage(),
-                               ),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => TowingServicesPage(),
+                                ),
                               );
 
                               // Navigate to the desired page
@@ -317,7 +326,12 @@ class RR extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 6.0),
                           child: GestureDetector(
                             onTap: () {
-                              // Navigate to the desired page
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatBot(),
+                                ),
+                              );
                             },
                             child: Container(
                               height: 120,
@@ -331,7 +345,7 @@ class RR extends StatelessWidget {
                                   ),
                                   SizedBox(height: 8),
                                   Text(
-                                    'Blog',
+                                    'Helper Bot',
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
@@ -405,23 +419,22 @@ class RR extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.garage),
+            label: 'Repair',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.garage),
-            label: 'Service',
+            icon: Icon(Icons.fire_truck),
+            label: 'Towing',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
-            label: 'Blog',
+            label: 'Helper Bot',
           ),
         ],
-        currentIndex: 0, // Set the default index to 1
         onTap: (int index) {
           // Handle navigation based on the index tapped
           switch (index) {
-            case 1:
+            case 0:
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -429,20 +442,28 @@ class RR extends StatelessWidget {
                 ),
               );
               break;
-            case 2:
-              break;
-            case 0:
+            case 1:
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RR(),
+                  builder: (context) => TowingServicesPage(),
+                ),
+              );
+              break;
+            case 2:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatBot(),
                 ),
               );
               break;
           }
         },
         backgroundColor: const Color(0xFF9BC1BC),
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.black,
+        unselectedItemColor:
+            Colors.black, // Add this line to set the unselected item color
       ),
     );
   }

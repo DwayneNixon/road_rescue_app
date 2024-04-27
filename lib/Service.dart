@@ -4,6 +4,8 @@ import 'package:road_rescue_app/login.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:road_rescue_app/widgets/Towingpage.dart';
+import 'package:road_rescue_app/chat.dart';
 
 class PicturePage extends StatefulWidget {
   @override
@@ -39,7 +41,7 @@ class _PicturePageState extends State<PicturePage> {
       appBar: AppBar(
         title: Center(
           child: Text(
-            'Services',
+            'Repair Services',
             style: TextStyle(
               fontSize: 20,
             ),
@@ -676,23 +678,23 @@ class _PicturePageState extends State<PicturePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.garage),
+            label: 'Repair',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.garage),
-            label: 'Service',
+            icon: Icon(Icons.fire_truck),
+            label: 'Towing',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
-            label: 'Blog',
+            label: 'Helper Bot',
           ),
         ],
-        currentIndex: 1, // Set the default index to 1
+        currentIndex: 0,
         onTap: (int index) {
           // Handle navigation based on the index tapped
           switch (index) {
-            case 1:
+            case 0:
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -700,13 +702,19 @@ class _PicturePageState extends State<PicturePage> {
                 ),
               );
               break;
-            case 2:
-              break;
-            case 0:
+            case 1:
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RR(),
+                  builder: (context) => TowingServicesPage(),
+                ),
+              );
+              break;
+            case 2:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatBot(),
                 ),
               );
               break;
@@ -714,6 +722,8 @@ class _PicturePageState extends State<PicturePage> {
         },
         backgroundColor: const Color(0xFF9BC1BC),
         selectedItemColor: Colors.white,
+        unselectedItemColor:
+            Colors.black, // Add this line to set the unselected item color
       ),
     );
   }

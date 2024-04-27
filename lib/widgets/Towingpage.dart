@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
-
+import 'package:road_rescue_app/Service.dart';
+import 'package:road_rescue_app/chat.dart';
+import 'package:road_rescue_app/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:road_rescue_app/homePage.dart';
 import 'Providerspage.dart';
 
 class TowingServicesPage extends StatelessWidget {
@@ -12,7 +16,62 @@ class TowingServicesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Towing Services'),
+        title: Center(
+          child: Text(
+            'Towing Services',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RR(),
+              ),
+            );
+          },
+          icon: Icon(Icons.home),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('Logout'),
+                    content: Text('Are you sure you want to logout?'),
+                    actions: [
+                      TextButton(
+                        child: Text('Cancel'),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      TextButton(
+                        child: Text('Logout'),
+                        onPressed: () {
+                          FirebaseAuth.instance.signOut();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            icon: Icon(Icons.perm_identity_sharp),
+          )
+        ],
+        backgroundColor: const Color(0xFF9BC1BC),
       ),
       body: Stack(
         children: [
@@ -96,9 +155,12 @@ class TowingServicesPage extends StatelessWidget {
                           border: OutlineInputBorder(),
                         ),
                         items: [
-                          DropdownMenuItem(child: Text('Light Vehicle'), value: 'Light'),
-                          DropdownMenuItem(child: Text('Medium Vehicle'), value: 'Medium'),
-                          DropdownMenuItem(child: Text('Heavy Vehicle'), value: 'Heavy'),
+                          DropdownMenuItem(
+                              child: Text('Light Vehicle'), value: 'Light'),
+                          DropdownMenuItem(
+                              child: Text('Medium Vehicle'), value: 'Medium'),
+                          DropdownMenuItem(
+                              child: Text('Heavy Vehicle'), value: 'Heavy'),
                         ],
                         onChanged: (value) {},
                       ),
@@ -141,16 +203,20 @@ class TowingServicesPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ProvidersPage()),
+                        MaterialPageRoute(
+                            builder: (context) => ProvidersPage()),
                       ); // Handle form submission
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green, // Set button color to green
-                      padding: EdgeInsets.symmetric(vertical: 15.0), // Set button height
+                      backgroundColor:
+                          Colors.green, // Set button color to green
+                      padding: EdgeInsets.symmetric(
+                          vertical: 15.0), // Set button height
                     ),
                     child: Text(
                       'Submit',
-                      style: TextStyle(color: Colors.black), // Set text color to black
+                      style: TextStyle(
+                          color: Colors.black), // Set text color to black
                     ),
                   ),
                 ),
@@ -161,7 +227,8 @@ class TowingServicesPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () => _callNumber('010'),
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 16.0, vertical: 12.0),
                       decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(20.0),
@@ -171,7 +238,8 @@ class TowingServicesPage extends StatelessWidget {
                         children: [
                           Icon(Icons.call, color: Colors.white),
                           SizedBox(width: 8.0),
-                          Text('Emergency Helpline', style: TextStyle(color: Colors.white)),
+                          Text('Emergency Helpline',
+                              style: TextStyle(color: Colors.white)),
                         ],
                       ),
                     ),
@@ -182,6 +250,56 @@ class TowingServicesPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.garage),
+            label: 'Repair',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.fire_truck),
+            label: 'Towing',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: 'Helper Bot',
+          ),
+        ],
+        currentIndex: 1,
+        onTap: (int index) {
+          // Handle navigation based on the index tapped
+          switch (index) {
+            case 0:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PicturePage(),
+                ),
+              );
+              break;
+            case 1:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TowingServicesPage(),
+                ),
+              );
+              break;
+            case 2:
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ChatBot(),
+                ),
+              );
+              break;
+          }
+        },
+        backgroundColor: const Color(0xFF9BC1BC),
+        selectedItemColor: Colors.white,
+        unselectedItemColor:
+            Colors.black, // Add this line to set the unselected item color
       ),
     );
   }

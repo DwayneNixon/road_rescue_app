@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:road_rescue_app/Service.dart';
+import 'package:road_rescue_app/chat.dart';
 import 'package:road_rescue_app/garage.dart';
 import 'package:road_rescue_app/homePage.dart';
 import 'package:road_rescue_app/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:road_rescue_app/updates.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
