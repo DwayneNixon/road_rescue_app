@@ -56,68 +56,77 @@ class GaragePage extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 10), // Add this line
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: garageList.length,
               itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {
-                    // Handle column click event
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => GarageDetailsPage(
-                          garage: garageList[index],
-                        ),
-                      ),
-                    );
-                  },
-                  child: Card(
-                    color: const Color(0xFF9BC1BC),
-                    child: SizedBox(
-                      height: 100, // Increase the height as desired
-                      child: Center(
-                        child: ListTile(
-                          title: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircleAvatar(
-                                backgroundImage:
-                                    AssetImage('${garageList[index].imageUrl}'),
-                                radius: 30,
+                return Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        // Handle column click event
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => GarageDetailsPage(
+                              garage: garageList[index],
+                            ),
+                          ),
+                        );
+                      },
+                      child: Card(
+                        color: const Color(0xFFF6f4d2),
+                        child: SizedBox(
+                          width: 440,
+                          height: 100, // Increase the height as desired
+                          child: Center(
+                            child: ListTile(
+                              title: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                        '${garageList[index].imageUrl}'),
+                                    radius: 30,
+                                  ),
+                                  const SizedBox(
+                                      width: 10), // Add this line for the gap
+                                  Text(
+                                    garageList[index].name,
+                                    style: const TextStyle(
+                                      fontSize:
+                                          30, // Increase the font size as desired
+                                      fontWeight:
+                                          FontWeight.bold, // Make the text bold
+                                    ),
+                                    textAlign: TextAlign
+                                        .center, // Align the text to the middle of the right side
+                                  ),
+                                ],
                               ),
-                              const SizedBox(
-                                  width: 10), // Add this line for the gap
-                              Text(
-                                garageList[index].name,
-                                style: const TextStyle(
-                                  fontSize:
-                                      30, // Increase the font size as desired
-                                  fontWeight:
-                                      FontWeight.bold, // Make the text bold
-                                ),
-                                textAlign: TextAlign
-                                    .center, // Align the text to the middle of the right side
-                              ),
-                            ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
+                    SizedBox(
+                        height:
+                            10), // Add this line for the gap between entries
+                  ],
                 );
               },
-            ),
+            ), // Add this line
           ],
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Color(0xFF003566),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -163,7 +172,7 @@ class GaragePage extends StatelessWidget {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.white,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color
@@ -191,7 +200,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.garage.name),
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -230,7 +239,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                   padding: const EdgeInsets.all(10),
                   width: 420,
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
@@ -258,7 +267,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 100,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: GestureDetector(
@@ -310,7 +319,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 100,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: GestureDetector(
@@ -362,7 +371,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 120,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: GestureDetector(
@@ -414,7 +423,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 100,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: GestureDetector(
@@ -483,7 +492,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 400,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
@@ -522,7 +531,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 400,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
@@ -578,7 +587,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 300,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
@@ -597,7 +606,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
                         width: 300,
                         margin: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Container(
@@ -620,7 +629,7 @@ class _GarageDetailsPageState extends State<GarageDetailsPage> {
           ),
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFf8edeb),
     );
   }
 }

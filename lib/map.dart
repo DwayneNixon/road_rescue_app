@@ -112,7 +112,7 @@ class MapPage extends StatelessWidget {
                     tooltip: 'Share Location',
                   )
                 ],
-                backgroundColor: const Color(0xFF9BC1BC),
+                backgroundColor: const Color(0xFF5fa8d3),
               ),
               body: FlutterMap(
                 options: MapOptions(

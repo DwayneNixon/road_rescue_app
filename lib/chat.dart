@@ -118,12 +118,12 @@ class _ChatBotState extends State<ChatBot> {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: DashChat(
         messageOptions: MessageOptions(
             showTime: true,
-            textColor: Colors.blue,
+            textColor: Color(0xFF5fa8d3),
             containerColor: Colors.black),
         typingUsers: typing,
         currentUser: muself,
@@ -132,7 +132,7 @@ class _ChatBotState extends State<ChatBot> {
         },
         messages: allMassages,
       ),
-      backgroundColor: Color.fromARGB(255, 177, 233, 228),
+      backgroundColor: Color(0xFFf8edeb),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -178,7 +178,7 @@ class _ChatBotState extends State<ChatBot> {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.white,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color

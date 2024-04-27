@@ -59,7 +59,7 @@ class ProvidersPage extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       backgroundColor: Color(0xFF003566),
       body: SingleChildScrollView(
@@ -154,7 +154,7 @@ class ProvidersPage extends StatelessWidget {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.white,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color

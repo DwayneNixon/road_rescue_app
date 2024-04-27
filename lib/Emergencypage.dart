@@ -53,7 +53,7 @@ class Emergencypage extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: Column(
         children: [
@@ -97,6 +97,7 @@ class Emergencypage extends StatelessWidget {
           // Add your containers for emergency services here
         ],
       ),
+      backgroundColor: Color(0xFFf8edeb),
     );
   }
 }

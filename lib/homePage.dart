@@ -20,7 +20,7 @@ class RR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFf8edeb),
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -77,7 +77,7 @@ class RR extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: SingleChildScrollView(
         child: SafeArea(
@@ -143,7 +143,7 @@ class RR extends StatelessWidget {
                               height: 40,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: color_white,
+                                color: Colors.white,
                                 border: Border.all(
                                   color: Colors.black,
                                   width: 1,
@@ -265,7 +265,7 @@ class RR extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
-                                color: color_white,
+                                color: Colors.white,
                                 border: Border.all(
                                   color: Colors.black,
                                   width: 1,
@@ -311,7 +311,7 @@ class RR extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
-                                color: color_white,
+                                color: Colors.white,
                                 border: Border.all(
                                   color: Colors.black,
                                   width: 1,
@@ -355,7 +355,7 @@ class RR extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
-                                color: color_white,
+                                color: Colors.white,
                                 border: Border.all(
                                   color: Colors.black,
                                   width: 1,
@@ -402,7 +402,7 @@ class RR extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              'assets/images/HomePage_icons/360_F_554093090_372SlpLXbrLROL0VhPBVVOdeeAqU1gWO.jpg',
+                              'assets/images/7db328d5-b0b8-488b-9a31-26020c1d85ec.jpeg',
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -460,7 +460,7 @@ class RR extends StatelessWidget {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.black,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color

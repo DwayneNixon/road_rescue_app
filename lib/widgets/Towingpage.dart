@@ -71,7 +71,7 @@ class TowingServicesPage extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: Stack(
         children: [
@@ -195,7 +195,7 @@ class TowingServicesPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 45.0),
+                SizedBox(height: 35.0),
                 // Submit Button
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 20.0),
@@ -245,7 +245,7 @@ class TowingServicesPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 60.0),
+                SizedBox(height: 70.0),
               ],
             ),
           ),
@@ -296,7 +296,7 @@ class TowingServicesPage extends StatelessWidget {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.white,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color

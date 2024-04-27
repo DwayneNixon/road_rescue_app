@@ -51,7 +51,7 @@ class UpdatesPage extends StatelessWidget {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: ListView(
         children: [
@@ -69,6 +69,7 @@ class UpdatesPage extends StatelessWidget {
           ),
         ],
       ),
+      backgroundColor: Color(0xFFf8edeb),
     );
   }
 }
@@ -88,7 +89,7 @@ class UpdateContainer extends StatelessWidget {
       padding: EdgeInsets.all(16),
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.white,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: const Color.fromARGB(255, 0, 0, 0)!),
       ),

@@ -94,7 +94,7 @@ class _PicturePageState extends State<PicturePage> {
             icon: Icon(Icons.perm_identity_sharp),
           )
         ],
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -161,8 +161,8 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add left and right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 0
-                                ? Color(0xFF9BC1BC) // Highlighted color
-                                : Colors.grey[300],
+                                ? Color(0xFFc8b6ff) // Highlighted color
+                                : Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Colors.black, // Add border color
@@ -201,8 +201,8 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 1
-                                ? Color(0xFF9BC1BC) // Highlighted color
-                                : Colors.grey[300],
+                                ? Color(0xFFc8b6ff) // Highlighted color
+                                : Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Colors.black, // Add border color
@@ -241,8 +241,8 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 2
-                                ? Color(0xFF9BC1BC) // Highlighted color
-                                : Colors.grey[300],
+                                ? Color(0xFFc8b6ff) // Highlighted color
+                                : Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Colors.black, // Add border color
@@ -281,8 +281,8 @@ class _PicturePageState extends State<PicturePage> {
                               right: 15), // Add right margin for gap
                           decoration: BoxDecoration(
                             color: selectedVehicleIndex == 3
-                                ? Color(0xFF9BC1BC) // Highlighted color
-                                : Colors.grey[300],
+                                ? Color(0xFFc8b6ff) // Highlighted color
+                                : Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Colors.black, // Add border color
@@ -342,8 +342,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 0
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -370,8 +370,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 1
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -398,8 +398,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 2
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -426,8 +426,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 3
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -454,8 +454,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedModeIndex == 4
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -505,8 +505,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add left and right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 0
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -541,8 +541,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 1
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -577,8 +577,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 2
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -613,8 +613,8 @@ class _PicturePageState extends State<PicturePage> {
                           right: 15), // Add right margin for gap
                       decoration: BoxDecoration(
                         color: selectedCategoryIndex == 3
-                            ? Color(0xFF9BC1BC) // Highlighted color
-                            : Colors.grey[300],
+                            ? Color(0xFFc8b6ff) // Highlighted color
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: Colors.black, // Add border color
@@ -657,12 +657,12 @@ class _PicturePageState extends State<PicturePage> {
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.blue, // Set text color
+                backgroundColor: Colors.green, // Set text color
                 padding: EdgeInsets.symmetric(
-                    horizontal: 20, vertical: 15), // Increase vertical padding
+                    horizontal: 160, vertical: 15), // Increase vertical padding
                 shape: RoundedRectangleBorder(
                   borderRadius:
-                      BorderRadius.circular(10), // Set button border radius
+                      BorderRadius.circular(20), // Set button border radius
                 ),
                 textStyle: TextStyle(
                   fontSize: 16,
@@ -720,11 +720,12 @@ class _PicturePageState extends State<PicturePage> {
               break;
           }
         },
-        backgroundColor: const Color(0xFF9BC1BC),
+        backgroundColor: const Color(0xFF5fa8d3),
         selectedItemColor: Colors.white,
         unselectedItemColor:
             Colors.black, // Add this line to set the unselected item color
       ),
+      backgroundColor: Color(0xFFf8edeb),
     );
   }
 }
