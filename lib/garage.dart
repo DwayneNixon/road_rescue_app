@@ -102,7 +102,7 @@ class GaragePage extends StatelessWidget {
                                     garageList[index].name,
                                     style: const TextStyle(
                                       fontSize:
-                                          30, // Increase the font size as desired
+                                          25, // Increase the font size as desired
                                       fontWeight:
                                           FontWeight.bold, // Make the text bold
                                     ),
